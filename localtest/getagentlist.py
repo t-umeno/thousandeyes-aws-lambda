@@ -12,6 +12,9 @@ except:
 
 thousandeyes_user = os.environ['THOUSANDEYES_USER']
 thousandeyes_token = os.environ['THOUSANDEYES_TOKEN']
+tousanndeyes_agentname = 'thousandeyes-va'
+if ('THOUSANDEYES_AGENTNAME' in os.environ):
+    tousanndeyes_agentname = os.environ['THOUSANDEYES_AGENTNAME']
 
 url = "https://api.thousandeyes.com/v6/agents.json"
 
@@ -29,7 +32,7 @@ if (response.status_code == 200):
     agents = json.loads(response.content)["agents"]
     for agent in agents:
         #print(json.dumps(flow, indent=4)) # formatted print
-        if (agent['agentName'] == 'thousandeyes-va'):
+        if (agent['agentName'] == tousanndeyes_agentname):
             print(agent['agentState'])
             print(agent['lastSeen'])
 # If unable to fetch list of alerts
