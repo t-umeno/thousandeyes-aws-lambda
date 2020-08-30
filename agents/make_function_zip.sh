@@ -7,6 +7,6 @@ pip install requests
 rm function.zip
 (cd $VIRTUAL_ENV/lib/python3.6/site-packages; zip -r9 ${OLDPWD}/function.zip .
 )
-zip -g function.zip get_flows_lambda.py
+zip -g function.zip agent_status_lambda.py
 deactivate
 rm -r v-env
