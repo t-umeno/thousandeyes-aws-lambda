@@ -5,6 +5,9 @@ import json
 import datetime
 from requests.auth import HTTPBasicAuth
 
+from pytz import timezone
+from dateutil import parser
+
 try:
     requests.packages.urllib3.disable_warnings()
 except:
@@ -35,6 +38,8 @@ if (response.status_code == 200):
         if (agent['agentName'] == tousanndeyes_agentname):
             print(agent['agentState'])
             print(agent['lastSeen'])
+            lastSeen_JST = parser.parse(agent['lastSeen'] + '+00:00').astimezone(timezone('Asia/Tokyo'))
+            print(lastSeen_JST)
 # If unable to fetch list of alerts
 else:
     print("An error has ocurred, while fetching agentlists, with the following code {}".format(response.status_code))
