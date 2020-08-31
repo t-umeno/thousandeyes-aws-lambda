@@ -8,6 +8,10 @@ import urllib.request
 import requests
 import json
 import datetime
+
+from pytz import timezone
+from dateutil import parser
+
 from requests.auth import HTTPBasicAuth
 
 try:
@@ -63,6 +67,8 @@ def agent_status():
             if (agent['agentName'] == tousanndeyes_agentname):
                 print(agent['agentState'])
                 print(agent['lastSeen'])
+                lastSeen_JST = parser.parse(agent['lastSeen'] + '+00:00').astimezone(timezone('Asia/Tokyo'))
+                print(lastSeen_JST)
                 if (agent['agentState'] == 'Offline'):
                     print('Offline line_ng_msg: %s' % line_ng_msg)
                     try:
@@ -72,7 +78,9 @@ def agent_status():
                             # The object does not exist.
                             print('send NG message')
                             s3.Object(s3_bucket, 'status_ng').put()
-                            send_info(line_ng_msg)
+                            msg = tousanndeyes_agentname + ' ' + line_ng_msg + ' lastSeen_JST: ' + str(lastSeen_JST)
+                            print(msg)
+                            send_info(msg)
                         else:
                             # Something else has gone wrong.
                             raise
@@ -94,7 +102,9 @@ def agent_status():
                         # The object does exist.
                         print('send OK message')
                         s3.Object(s3_bucket, 'status_ng').delete()
-                        send_info(line_ok_msg)
+                        msg = tousanndeyes_agentname + ' ' + line_ok_msg + ' lastSeen_JST: ' + str(lastSeen_JST)
+                        print(msg)
+                        send_info(msg)
 
     else:
         print("An error has ocurred, while fetching agentlists, with the following code {}".format(response.status_code))
