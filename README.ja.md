@@ -71,6 +71,8 @@ ThousandEyes の agent の OVA ファイルをダウンロードし、 VirtualBo
     AWS Lambda で使用する環境変数を設定します。
     | キー | 値 |
     ----|----
+    | THOUSANDEYES_USER | ThousandEyes ユーザ名 |
+    | THOUSANDEYES_TOKEN | ThousandEyes Token |
     | LINE_TOKEN | LINE Notify アクセストークン |
     | LINE_OK_MSG | 通信正常になった時に LINE Notify で通知するメッセージ |
     | LINE_NG_MSG | 通信異常になった時に LINE Notify で通知するメッセージ |
@@ -79,12 +81,16 @@ ThousandEyes の agent の OVA ファイルをダウンロードし、 VirtualBo
    環境変数が以下の場合、下記のコマンドを実行します。
     | キー | 値 |
     ----|----
+    | THOUSANDEYES_USER | taro.yamada@example.com |
+    | THOUSANDEYES_TOKEN | 0123456789abcdef0123456789abcdef |
     | LINE_TOKEN | abcdefghijklmnopqrstuvwxyz0123456789ABCDEFG |
     | LINE_OK_MSG | OK |
     | LINE_NG_MSG | NG |
     | S3_BUCKET | thousandeyes-agent |
     ```
     ./env_function.sh \
+    THOUSANDEYES_USER=taro.yamada@example.com,\
+    THOUSANDEYES_TOKEN=0123456789abcdef0123456789abcdef,\
     LINE_TOKEN=abcdefghijklmnopqrstuvwxyz0123456789ABCDEFG,\
     LINE_OK_MSG=OK,\
     LINE_NG_MSG=NG,\
