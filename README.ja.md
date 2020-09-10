@@ -32,7 +32,7 @@ administrator の アクセスキー ID とシークレットアクセスキー 
 1. ThousandEyes の Agentを設置します。
 ThousandEyes の agent の OVA ファイルをダウンロードし、 VirtualBox などにインストールします。  
 
-1. ThousandEye の Token を取得します。  
+1. ThousandEyes の Token を取得します。  
 
 1. LINE Notify アクセストークンの発行  
 [LINE Notify マイページ](https://notify-bot.line.me/ja/)でアクセストークンを発行します。
