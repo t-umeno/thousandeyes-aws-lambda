@@ -29,8 +29,10 @@ administrator の アクセスキー ID とシークレットアクセスキー 
 
 1. Ubuntu 18.04 LTS に virtualenv, zip をインストール  
 
-1. ThousandEyes の Enterprise Agentを設置します。
-ThousandEyes の Enterprise Agent の OVA ファイルをダウンロードし、 VirtualBox などにインストールします。  
+1. ThousandEyes の Enterprise Agentを設置  
+ThousandEyes にログインし [Get Started with Devices](https://app.thousandeyes.com/settings/devices/) の「Install More Agents」のボタンを押して、 Enterprise Agent の OVA ファイルを入手します。入手した OVA ファイルを VirtualBox などにインストールします。  
+ThousandEyes の Enterprise Agent の Enterprise Agent の詳細は [What is an Enterprise Agent?](https://success.thousandeyes.com/PublicArticlePage?articleIdParam=kA0E0000000CmnbKAC_What-is-an-Enterprise-Agent-1472236187506) を参照してください。  
+エージェント名を thousandeyes-va から変更する場合、エージェント名を控えておいてください。  
 
 1. ThousandEyes の Token を取得します。  
 
