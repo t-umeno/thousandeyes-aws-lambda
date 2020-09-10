@@ -52,9 +52,9 @@ ThousandEyes の agent の OVA ファイルをダウンロードし、 VirtualBo
 「次へ」を3回押して、「バケットを作成」を押します。
 
 1. make_function_zip.sh 実行  
-    AWS Lambda で実行するプログラムを function.zip のファイルに集約します。以降、 get_flows のディレクトリでコマンド実行します。
+    AWS Lambda で実行するプログラムを function.zip のファイルに集約します。以降、 agents のディレクトリでコマンド実行します。
     ```
-    cd get_flows ; ./make_function_zip.sh
+    cd agents ; ./make_function_zip.sh
 
     ```
 1. create-function.sh 実行  
