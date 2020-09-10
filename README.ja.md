@@ -1,6 +1,6 @@
 # thousandeyes-aws-lambda
-* ThousandEyes API v6を用いてagentの状態を取得します。agentがofflineになったらLINE Notify で通知します。  
-* AWS EventBridgeからAWS Lambdaを定期実行し、agentがofflineになったら現在の状態を保存するためにAWS S3にファイルを作成します。  
+* ThousandEyes API v6を用いてEnterprise Agentの状態を取得します。Enterprise AgentがofflineになったらLINE Notify で通知します。  
+* AWS EventBridgeからAWS Lambdaを定期実行し、Enterprise Agentがofflineになったら現在の状態を保存するためにAWS S3にファイルを作成します。  
 ![diagram](https://github.com/t-umeno/thousandeyes-aws-lambda/blob/master/diagram.png)
 
 ## 実行方法
@@ -29,8 +29,8 @@ administrator の アクセスキー ID とシークレットアクセスキー 
 
 1. Ubuntu 18.04 LTS に virtualenv, zip をインストール  
 
-1. ThousandEyes の Agentを設置します。
-ThousandEyes の agent の OVA ファイルをダウンロードし、 VirtualBox などにインストールします。  
+1. ThousandEyes の Enterprise Agentを設置します。
+ThousandEyes の Enterprise Agent の OVA ファイルをダウンロードし、 VirtualBox などにインストールします。  
 
 1. ThousandEyes の Token を取得します。  
 
@@ -102,8 +102,8 @@ ThousandEyes の agent の OVA ファイルをダウンロードし、 VirtualBo
 「EventBridge (CloudWatch Events): agentstatus (無効)」のチェックボックスをチェックし、「Enable」ボタンを押し、ダイアログボックスの「Enable」ボタンを押します。ダイアログボックスの「閉じる」を押します。
 
 1. 動作確認  
-ThousandEyes の agent とインターネットとの通信を遮断、もしくは agent のVMをシャットダウンして、15分から30分くらいするとLINE NotifyにNGの通知があることを確認します。  
-ThousandEyes の agent とインターネットとの通信を回復、もしくは agent のVMを再起動して、数分するとLINE NotifyにOKの通知があることを確認します。  
+ThousandEyes の Enterprise Agent とインターネットとの通信を遮断、もしくは Enterprise Agent のVMをシャットダウンして、15分から30分くらいするとLINE NotifyにNGの通知があることを確認します。  
+ThousandEyes の Enterprise Agent とインターネットとの通信を回復、もしくは Enterprise Agent のVMを再起動して、数分するとLINE NotifyにOKの通知があることを確認します。  
 
 ## 参照
 https://developer.thousandeyes.com/v6/  
