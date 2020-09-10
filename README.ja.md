@@ -106,6 +106,7 @@ ThousandEyes の agent とインターネットとの通信を遮断、もしく
 ThousandEyes の agent とインターネットとの通信を回復、もしくは agent のVMを再起動して、数分するとLINE NotifyにOKの通知があることを確認します。  
 
 ## 参照
+https://developer.thousandeyes.com/v6/  
 https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/with-s3-example-deployment-pkg.html#with-s3-example-deployment-pkg-python  
 https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/lambda-python.html  
 https://qiita.com/sunleth/items/bc9fa61866d6f23b3a18  
