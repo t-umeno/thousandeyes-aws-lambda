@@ -1,6 +1,6 @@
 # thousandeyes-aws-lambda
 * ThousandEyes API v6を用いてagentの状態を取得します。agentがofflineになったらLINE Notify で通知します。  
-* AWS EventBridgeからAWS Lambdaを定期実行し、agentがofflineになったらAWS S3にファイルを作成し、現在の状態を保存します。
+* AWS EventBridgeからAWS Lambdaを定期実行し、agentがofflineになったら現在の状態を保存するためにAWS S3にファイルを作成します。  
 ![diagram](https://github.com/t-umeno/thousandeyes-aws-lambda/blob/master/diagram.png)
 
 ## 実行方法
