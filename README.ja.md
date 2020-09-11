@@ -35,6 +35,7 @@ ThousandEyes の Enterprise Agent の Enterprise Agent の詳細は [What is an 
 エージェント名を thousandeyes-va から変更する場合、エージェント名を控えておいてください。  
 
 1. ThousandEyes の Token を取得します。  
+ThousandEyes にログインし [Account Settings > Users and Roles](https://app.thousandeyes.com/account-settings/users-roles/?section=profile) の Basic Authentication Token に記載されている文字列が ThousandEyes Token になります。  
 
 1. LINE Notify アクセストークンの発行  
 [LINE Notify マイページ](https://notify-bot.line.me/ja/)でアクセストークンを発行します。
