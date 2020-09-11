@@ -110,8 +110,14 @@ ThousandEyes にログインし [Account Settings > Users and Roles](https://app
 「EventBridge (CloudWatch Events): agentstatus (無効)」のチェックボックスをチェックし、「Enable」ボタンを押し、ダイアログボックスの「Enable」ボタンを押します。ダイアログボックスの「閉じる」を押します。
 
 1. 動作確認  
-ThousandEyes の Enterprise Agent とインターネットとの通信を遮断、もしくは Enterprise Agent のVMをシャットダウンして、15分から30分くらいするとLINE NotifyにNGの通知があることを確認します。  
-ThousandEyes の Enterprise Agent とインターネットとの通信を回復、もしくは Enterprise Agent のVMを再起動して、数分するとLINE NotifyにOKの通知があることを確認します。  
+ThousandEyes の Enterprise Agent とインターネットとの通信を遮断、もしくは Enterprise Agent のVMをシャットダウンして、15分から30分くらいするとLINE Notifyに下記の様なNGの通知があることを確認します。lastSeen_JST: は最後に Entperise Agent と通信した時刻です。  
+```
+[thousandeyes-agent] thousandeyes-va NG lastSeen_JST: 2020-09-01 06:06:34+09:00
+```
+ThousandEyes の Enterprise Agent とインターネットとの通信を回復、もしくは Enterprise Agent のVMを再起動して、数分するとLINE Notifyに下記の様なOKの通知があることを確認します。  
+```
+[thousandeyes-agent] thousandeyes-va OK lastSeen_JST: 2020-09-01 06:48:29+09:00
+```
 
 ## 参照
 https://developer.thousandeyes.com/v6/  
