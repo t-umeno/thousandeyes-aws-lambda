@@ -80,7 +80,7 @@ ThousandEyes の Enterprise Agent の Enterprise Agent の詳細は [What is an 
     | LINE_NG_MSG | 通信異常になった時に LINE Notify で通知するメッセージ |
     | S3_BUCKET | 現在の状態を保存する S3 バケット |
     
-    エージェント名を変更した場合は下記の環境変数も設定してください。  
+    エージェント名を thousandeyes-va から変更した場合は下記の環境変数も設定してください。  
     | キー | 値 |
     ----|----
     | THOUSANDEYES_AGENTNAME | ThousandEyes エージェント名 |
