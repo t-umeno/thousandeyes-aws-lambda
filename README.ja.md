@@ -70,7 +70,7 @@ ThousandEyes の Enterprise Agent の Enterprise Agent の詳細は [What is an 
     ```
 
 1. env_function.sh 実行  
-    AWS Lambda で使用する環境変数を設定します。下記の環境変数の設定が必要です。
+    AWS Lambda で使用する環境変数を設定します。下記の環境変数の設定が必要です。  
     | キー | 値 |
     ----|----
     | THOUSANDEYES_USER | ThousandEyes ユーザ名 |
@@ -79,10 +79,12 @@ ThousandEyes の Enterprise Agent の Enterprise Agent の詳細は [What is an 
     | LINE_OK_MSG | 通信正常になった時に LINE Notify で通知するメッセージ |
     | LINE_NG_MSG | 通信異常になった時に LINE Notify で通知するメッセージ |
     | S3_BUCKET | 現在の状態を保存する S3 バケット |
+    
     エージェント名を変更した場合は下記の環境変数も設定してください。  
     | キー | 値 |
     ----|----
     | THOUSANDEYES_AGENTNAME | ThousandEyes エージェント名 |
+    
     環境変数が以下の場合、下記のコマンドを実行します。  
     | キー | 値 |
     ----|----
